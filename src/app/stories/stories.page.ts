@@ -17,3 +17,4 @@ export class StoriesPage implements OnInit {
    this.modalController.dismiss();
  }
 }
+
