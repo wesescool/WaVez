@@ -1,0 +1,13 @@
+Index: src/app/stories/stories.page.ts
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/app/stories/stories.page.ts	(revision 0553a63f948b36003f13b0ca51adc83b3cf127ba)
++++ src/app/stories/stories.page.ts	(date 1589505995610)
+@@ -18,3 +18,4 @@
+  }
+ }
+ 
++b
+\ No newline at end of file
