@@ -1,0 +1,109 @@
+<ion-header>
+	<ion-toolbar>
+		<ion-buttons slot="start">
+			<ion-back-button></ion-back-button>
+		</ion-buttons>
+		<ion-title>Account</ion-title>
+	</ion-toolbar>
+	<h1 (click)="subscribe()">Upgrade to Musicvic Premium</h1>
+	<ion-segment [(ngModel)]="tab" lines="none">
+		<ion-segment-button value="settigs">
+			<ion-label>
+				Settigs
+			</ion-label>
+		</ion-segment-button>
+		<ion-segment-button value="profile">
+			<ion-label>
+				Profile
+			</ion-label>
+		</ion-segment-button>
+	</ion-segment>
+</ion-header>
+
+<ion-content class="bg_color">
+	<div class="tab_container form" [ngSwitch]="tab">
+		<ion-list lines="none" *ngSwitchCase="'settigs'">
+			<ion-item lines="none">
+				<ion-label position="stacked">Audio Quality</ion-label>
+				<ion-select placeholder="Select One" interface="action-sheet">
+					<ion-select-option selected value="hd" selected-text>HD (High Quality)</ion-select-option>
+					<ion-select-option value="High">High</ion-select-option>
+					<ion-select-option value="Medium">Medium</ion-select-option>
+					<ion-select-option value="Low">Low</ion-select-option>
+				</ion-select>
+			</ion-item>
+			<ion-item lines="none">
+				<ion-label position="stacked">Preferred App Language</ion-label>
+				<ion-select placeholder="Select One" interface="action-sheet">
+					<ion-select-option selected value="English" selected-text>English (USA)</ion-select-option>
+					<ion-select-option value="Spanish">Spanish</ion-select-option>
+					<ion-select-option value="Arabic">Arabic</ion-select-option>
+					<ion-select-option value="Russian">Russian</ion-select-option>
+				</ion-select>
+			</ion-item>
+			<ion-item lines="none">
+				<ion-label position="stacked">Lyrics in</ion-label>
+				<ion-select placeholder="Select One" interface="action-sheet">
+					<ion-select-option selected value="English" selected-text>English</ion-select-option>
+					<ion-select-option value="Spanish">Spanish</ion-select-option>
+					<ion-select-option value="Arabic">Arabic</ion-select-option>
+					<ion-select-option value="Russian">Russian</ion-select-option>
+				</ion-select>
+			</ion-item>
+			<ion-item lines="none">
+				<ion-label position="stacked">Downloads</ion-label>
+				<ion-select placeholder="Select One" interface="action-sheet">
+					<ion-select-option selected value="WiFi" selected-text>WiFi Only</ion-select-option>
+					<ion-select-option value="mobile_data">Mobile Data Only </ion-select-option>
+					<ion-select-option value="mobile_data_wifi">Mobile Data or WiFi</ion-select-option>
+				</ion-select>
+			</ion-item>
+			<ion-item lines="none">
+				<div class="item_container">
+					<h3>Content History</h3>
+					<h2 class="d-flex">Clear History
+						<ion-icon class="zmdi zmdi-delete end ion-text-end"></ion-icon>
+					</h2>
+				</div>
+			</ion-item>
+
+			<ion-item lines="none" (click)="logout()">
+				<div class="item_container">
+					<h3>You're logged in as Samantha</h3>
+					<h2 class="d-flex"> Logout
+					</h2>
+				</div>
+			</ion-item>
+		</ion-list>
+
+
+		<ion-list lines="none" *ngSwitchCase="'profile'">
+
+			<ion-item lines="none">
+				<ion-label position="stacked">Full Name</ion-label>
+				<ion-input value="Samantha Smith" type="name"></ion-input>
+			</ion-item>
+			<ion-item lines="none">
+				<ion-label position="stacked">Eamil Address</ion-label>
+				<ion-input value="samanthasmith@mail.com" type="email"></ion-input>
+			</ion-item>
+			<ion-item lines="none">
+				<ion-label position="stacked">Gender</ion-label>
+				<ion-select placeholder="Select One" interface="action-sheet">
+					<ion-select-option selected value="f" selected-text> Female</ion-select-option>
+					<ion-select-option value="m"> Male</ion-select-option>
+				</ion-select>
+			</ion-item>
+			<ion-item lines="none">
+				<ion-label position="stacked">Phone Number (Optional)</ion-label>
+				<ion-input value="+1 987 654 3210" type="name"></ion-input>
+			</ion-item>
+
+			<ion-item lines="none">
+				<ion-label position="stacked">Regional (Optional)</ion-label>
+				<ion-input value="North America" type="name"></ion-input>
+			</ion-item>
+		</ion-list>
+	</div>
+
+</ion-content>

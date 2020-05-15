@@ -1,0 +1,7 @@
+{
+  "name": "Waves",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
